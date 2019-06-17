@@ -1,0 +1,506 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.wrapper {
+  margin: 0 auto;
+}
+
+.wrapper {
+  max-width: 1200px;
+  color: white;
+  background: rgba(22, 124, 146, 0.7);
+}
+
+body {
+  background: url(../image/spotlights-1784784_1920.jpg) no-repeat;
+  background-size: cover;
+}
+
+header {
+  background: rgba(22, 124, 146, 0.7);
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px 0 10px 0;
+}
+
+header a {
+  flex-grow: 1;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+}
+
+header a h1 {
+  font-family: sans-serif;
+  text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25);
+}
+
+header a h1:hover {
+  text-shadow: 0 1px 0 #ccc, 0 2px 0 red, 0 0 5px red;
+}
+
+header nav {
+  flex-grow: 2;
+  margin-top: 9px;
+}
+
+header ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+header ul li {
+  flex-grow: 2;
+}
+
+header ul li:hover {
+  text-shadow: 1px 1px 1px red !important;
+}
+
+header ul a {
+  display: block;
+  /*padding: 10px;*/
+  color: white;
+  border-left: 1px solid white;
+  text-align: center;
+  text-shadow: 1px 1px 1px black;
+  padding: 0 3px;
+}
+
+header ul a:hover {
+  text-shadow: 1px 1px 1px red;
+}
+
+/*фиксация меню при прокрутуке*/
+.headertop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+.main {
+  background: rgba(22, 124, 146, 0.7);
+}
+
+/*СЛАЙДЕР*/
+.bx-slider {
+  border: none !important;
+}
+
+.slider {
+  width: 100%;
+  height: 600px;
+}
+
+.slider .slide_1 {
+  height: 500px;
+  background: url(../image/tool-2766835_1280.jpg) no-repeat;
+  background-size: cover;
+}
+
+.slider .slide_2 {
+  height: 500px;
+  background: url(../image/electrician-1080554_1280.jpg) no-repeat;
+  background-size: cover;
+}
+
+.slider .slide_3 {
+  height: 500px;
+  background: url(../image/distributor-1981648_1280.jpg) no-repeat;
+  background-size: cover;
+}
+
+.slider .slide_4 {
+  height: 500px;
+  background: url(../image/switchgear-2069759_1280.jpg) no-repeat;
+  background-size: cover;
+}
+
+.slider .slide_5 {
+  height: 500px;
+  background: url(../image/electrician-1080563_1280.jpg) no-repeat;
+  background-size: cover;
+}
+
+.slider .slide_6 {
+  height: 500px;
+  background: url(../image/electrician-729240_1280.jpg) no-repeat;
+  background-size: cover;
+}
+
+/* КОНТЕНТ */
+.article_h4 {
+  text-align: center;
+  /* заголовок ИНТЕРЕСНЫЕ ФАКТЫ*/
+  padding: 20px;
+  border-bottom: 2px solid #89F9F0;
+  width: 60%;
+  position: static;
+  margin: 0 auto !important;
+  margin-bottom: 30px !important;
+}
+
+.content_article {
+  padding: 10px 80px;
+}
+
+.content_article h2, .content_article h4 {
+  text-shadow: 1px 1px 1px red;
+  padding-left: 50px;
+  margin: 20px;
+  position: relative;
+  font-size: 30px;
+}
+
+.content_article h2:before, .content_article h4:before {
+  content: " ";
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 10px;
+  left: 5px;
+}
+
+.content_article .h2_1:before {
+  background: url(../image/w128h1281385326444bolt.png) no-repeat center;
+  background-size: contain;
+  animation: icon_h2 2.5s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+.content_article .h2_2:before {
+  background: url(../image/plugin-icon.png) no-repeat center;
+  background-size: contain;
+  animation: icon_h2 2.5s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+.content_article p, .content_article blockquote {
+  font-size: 18px;
+  letter-spacing: 0.1em;
+  text-indent: 40px;
+}
+
+/*	бЛОКИ(ССЫЛКИ) */
+.content_a {
+  box-sizing: content-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+}
+
+@media (max-width: 990px) {
+  .content_a {
+    flex-direction: column;
+  }
+  .content_a a {
+    width: 300px;
+  }
+}
+
+.content_a a {
+  display: block;
+  margin: 10px;
+  flex-basis: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 20px 2px #89F9F0;
+}
+
+.content_a a:hover {
+  box-shadow: 0 0 20px 2px red;
+  opacity: 1 !important;
+}
+
+.content_a a section {
+  text-align: center;
+  height: 300px;
+}
+
+.content_a a section h3 {
+  font-size: 48px;
+  color: #89F9F0;
+  text-shadow: 1px 1px 1px #fff, 1.5px 1.5px 1.5px black;
+  text-transform: uppercase;
+}
+
+.block1 {
+  background: white url(../image/electrician-1968983_640_401x300.png) no-repeat center;
+  background-size: contain;
+}
+
+.block2 {
+  background: white url(../image/electrician-1969132_640.png) no-repeat center;
+  background-size: contain;
+}
+
+.block3 {
+  background: white url(../image/electricity-1968982_640.png) no-repeat center;
+  background-size: contain;
+}
+
+/*img КАРТИНКИ*/
+.content_article {
+  perspective: 800px;
+}
+
+.content_article img {
+  float: right;
+  width: 400px;
+  margin: 20px;
+  transform: rotateY(-10deg);
+  box-shadow: 0 0 20px 2px white;
+}
+
+@media (max-width: 780px) {
+  .content_article img {
+    width: 300px;
+    float: none;
+    display: block;
+    margin: 10px auto;
+  }
+}
+
+.old_avtomat {
+  width: 250px !important;
+  margin-top: 5px !important;
+}
+
+/* ТАБЛИЦА */
+.table {
+  font-family: sans-serif;
+}
+
+.table h4 {
+  font-size: 28px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #89F9F0;
+  position: relative;
+  text-shadow: 1px 3.6px black;
+}
+
+.table h4:after {
+  position: relative;
+  content: " ";
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  background: url(../image/icon4h.png);
+  background-size: cover;
+  top: 19px;
+  right: -10px;
+}
+
+.table h4:hover:after {
+  animation: icon4 3s linear infinite;
+}
+
+table {
+  margin: 20px auto;
+  border: #ddd;
+  border-collapse: collapse;
+}
+
+table td {
+  border: 1px solid #fff;
+  text-align: center;
+  text-transform: capitalize;
+  padding: 5px 0;
+}
+
+table th {
+  border: 1px solid #fff;
+  color: #89F9F0;
+  text-transform: uppercase;
+  padding: 5px 5px;
+}
+
+table tr:nth-child(odd) {
+  background: #0E4B58;
+}
+
+@media (max-width: 920px) {
+  table {
+    /*max-width: 600px;*/
+    font-size: 0.8em;
+  }
+}
+
+/*ГАЛЕРЕЯ РАБОТ*/
+.gallery {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  align-content: flex-start;
+  padding: 10px 80px;
+  font-family: 'Lobster', cursive, serif;
+}
+
+.gallery h3 {
+  flex-basis: 60%;
+  text-align: center;
+  text-shadow: 1px 1px 2px black;
+  margin: 20px;
+  font-size: 30px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  border-bottom: 2px solid #89F9F0;
+  padding: 10px;
+}
+
+.gallery h5 {
+  text-align: center;
+  text-shadow: 1px 1px 2px red;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 16px;
+}
+
+.gallery section {
+  box-shadow: 0 0 20px 2px #89F9F0;
+  flex-basis: 330px;
+  background: white;
+  padding: 5px;
+  margin: 25px;
+  background: rgba(22, 124, 146, 0.7);
+  transition: 0.2s;
+}
+
+.gallery section img {
+  cursor: pointer;
+  width: 100%;
+}
+
+.gallery section:hover {
+  box-shadow: 0 0 20px 2px red;
+  flex-basis: 350px;
+  margin: 15px;
+  transition: 0.6s;
+}
+
+.photo {
+  position: fixed;
+  z-index: 1000;
+  left: 0px;
+  top: 1px;
+  width: 100%;
+  height: 100%;
+  flex-basis: 330px !important;
+  box-shadow: none !important;
+  margin: 0px !important;
+  overflow: auto;
+}
+
+.photo:hover {
+  flex-basis: 330px !important;
+  box-shadow: none !important;
+  margin: 0 !important;
+}
+
+.photo img {
+  display: block;
+  margin: auto;
+  width: 70%;
+  max-width: 1200px;
+}
+
+/*	__FOOTER__*/
+#contacts {
+  padding: 10px;
+}
+
+footer {
+  padding: 20px;
+  text-align: center;
+}
+
+footer h3 {
+  text-align: center;
+  font-size: 24px;
+  text-shadow: 1px 1px 2px red;
+}
+
+.copy {
+  text-shadow: 1px 1px 2px red;
+  padding: 10px;
+  display: block;
+}
+
+/*АНИМАЦИЯ*/
+@keyframes icon4 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes icon_h2 {
+  0% {
+    width: 30px;
+    height: 30px;
+  }
+  50% {
+    width: 34px;
+    height: 34px;
+  }
+  100% {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media screen and (max-device-width: 600px) {
+  #header, h1, nav {
+    display: block;
+  }
+  h1 {
+    font-size: 2.5em;
+  }
+  #header nav ul li a {
+    font-size: 2em;
+    padding: 10px 2px;
+  }
+  table {
+    font-size: 1.5em;
+  }
+  .headertop h1 {
+    font-size: 4em;
+  }
+  .headertop nav a {
+    font-size: 2.6em;
+  }
+  .gallery h3 {
+    font-size: 2.4em;
+  }
+  .gallery h5 {
+    font-size: 2em;
+  }
+  .old_avtomat {
+    display: none !important;
+  }
+  body p {
+    font-size: 0.8em !important;
+  }
+}

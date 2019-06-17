@@ -1,0 +1,189 @@
+* {
+	margin: 0;padding: 0;
+}
+a {
+	text-decoration: none;
+	color:white;
+}
+header, .main, .wrapper {
+	width: 100%; max-width: 1200px; margin: 0 auto; box-sizing: border-box;
+}
+
+		/*// HEADER //*/
+
+body {
+	/*max-width: 1200px;*/
+	margin:0px auto;
+	background-image:url(../image/background.png); 
+}
+.wrapper {
+	box-shadow: 0 0 16px 8px grey;
+}
+.wrapper header {
+	background: url(https://wallpaperscraft.ru/image/les_derevya_tropa_stupeni_vhod_svet_62539_960x544.jpg) center center no-repeat;
+	background-size: cover;
+	height: 300px;
+	position: relative;
+}
+.wrapper header nav {
+	background: linear-gradient(rgba(150,241,255,0.1), rgba(177,170,255,0.1));
+	padding: 0px 30px;
+	transition: 2s;
+}
+.wrapper header nav:after{
+	content:" ";
+	display: block;
+	clear: both;
+}
+.wrapper header nav:hover{
+	background: linear-gradient(rgba(150,241,255,0.5), rgba(180,175,255,0.7));
+	font-size: 18px;
+	transition: 1.5s ;
+	box-shadow: 5px 0 10px 1px rgba(10,10,10,0.8);
+	transition:background padding 1.8s;
+}
+
+.wrapper header li {
+	list-style:none;
+	float: right;
+	transform: skewX(-20deg);
+}
+.wrapper header li a {
+	text-transform: uppercase;
+	padding: 9px 10px;
+	border: 1px solid transparent;
+	transition: border, color 1s;
+	transform: skewX(20deg) !important;
+	display: block;
+}
+.wrapper header li a i {
+	font-size: 14px;
+	margin-right: 6px;
+}
+.wrapper header li:first-child>a{
+	color:orange;
+}
+.wrapper header nav:hover a{
+	padding: 9px 16px;
+}
+.wrapper header li:hover {
+	border: 1.5px solid #96792E;
+	color: #FFC628;
+	text-shadow: 1px 1px 0 black;
+	box-shadow: 1px 0px 3px 1px orange;
+}
+.logotip {
+	opacity: 0.75;
+	margin: 20px;
+	width: 234px;
+	cursor: pointer;
+}
+.logotip img {
+	transition: 0.8s;
+	transition-delay: 0.5s;
+}
+.logotip:hover > img{
+	transform:  perspective(1000px) rotateY(360deg);
+	transition: 2.5s;
+	transition-delay: 0.15s;
+}
+.wrapper h1 {
+	text-transform: uppercase;
+	color: white;
+	text-shadow: 2px 2px 1px #96792E;
+}
+.wrapper header img{
+	width: 230px;
+}
+
+	/*	/// CENTER(main) \\\*/
+
+.main	{
+	color: white;
+	padding: 20px 80px;
+	background-color:black;
+background-image:
+radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px),
+radial-gradient(rgba(255,255,255,.4), rgba(255,255,255,.1) 2px, transparent 30px);
+background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px; 
+background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+}
+.main h2 {
+	margin: 10px 35px;
+}
+.main p {
+	text-indent: 2em;
+}
+
+	/*/// 		FOOTER  	\\\*/
+footer {
+	padding: 10px 0;
+	background:
+radial-gradient(black 15%, transparent 16%) 0 0,
+radial-gradient(black 15%, transparent 16%) 8px 8px,
+radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+background-color:#282828;
+background-size:16px 16px;
+}
+footer > div {
+	margin:10px auto;
+	text-align:center;
+}
+footer img {
+	width: 40px;
+}
+footer > div div {
+	font-size: 6px;
+	text-transform: uppercase;
+	color: white;
+	text-shadow: 2px 2px 1px #96792E;
+	vertical-align: middle;
+	display: inline-block;
+	margin-left: 10px;
+}
+footer > div p {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 18px;
+	color: white;
+	border-top: 1px solid orange;
+	border-bottom: 1px solid orange;
+	box-sizing: border-box;
+	vertical-align: middle;
+	padding: 8px 0;
+}
+
+@media (max-width: 525px){
+	.main	{
+	padding: 10px 30px;
+	background: #282828;
+}
+	.wrapper header li {
+	list-style:none;
+	width: 100%;
+	text-align:center;
+}
+.wrapper header nav:hover{
+	background: linear-gradient(rgba(150,241,255,0.1), rgba(177,170,255,0.1));
+	padding: 0px 30px;
+	font-size: 16px;
+}
+.wrapper header li:hover {
+	border: none;
+	text-shadow: 1px 1px 0 black;
+	box-shadow: none;
+}
+.wrapper header li a:hover{
+	color: orange;
+}
+.logotip {
+	margin: 0 auto;
+	text-align: center;
+}
+.wrapper header{
+	height: 342px;
+}
+}

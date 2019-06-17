@@ -1,0 +1,511 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: "Open Sans" , sans-serif; }
+
+/*курсивный шрифт*/
+.freestyle {
+  font-family: 'Dancing Script', cursive; }
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1920px; }
+
+.clear-fix:after {
+  content: "";
+  display: block;
+  clear: both; }
+
+/*HEADER*/
+.header , .footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px; }
+
+.header .logo {
+  margin: 0 5%; }
+
+.nav {
+  min-width: 262px; }
+
+.nav li {
+  display: inline-block;
+  list-style: none;
+  margin: 0 15px; }
+  .nav li a {
+    display: block;
+    position: relative;
+    text-decoration: none;
+    color: #555555;
+    font-family: "Open Sans - Semi Bold";
+    font-size: 0.875rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    transition: .3s; }
+    .nav li a:after {
+      content: "";
+      display: block;
+      height: 1px;
+      width: 50%;
+      position: absolute;
+      bottom: -5px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #97a0e9;
+      opacity: 0;
+      transition: 0.3s; }
+    .nav li a:hover, .nav li a:hover:after {
+      color: #97a0e9;
+      opacity: 1; }
+
+/*ВЫБОР КЛАССА (FORM)*/
+.trial-class {
+  background: url(../img/form-bg.png) center;
+  background-size: cover;
+  height: 600px; }
+  .trial-class:before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle; }
+
+.trial-class .form {
+  display: inline-block;
+  padding-left: 30px;
+  margin-left: 22%;
+  width: 300px;
+  height: 391px;
+  background: #fff;
+  box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  vertical-align: middle; }
+  .trial-class .form > p {
+    margin-top: 40px;
+    color: #5363db;
+    font-size: 1.625rem;
+    font-weight: 400; }
+
+.form form input, .form form select {
+  width: 230px;
+  height: 50px;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #f2f2f2;
+  outline: none;
+  border: none;
+  color: #888888;
+  font-weight: 400;
+  margin-top: 17px; }
+  .form form input:active:not(select), .form form input:focus:not(select), .form form select:active:not(select), .form form select:focus:not(select) {
+    border: 1px solid #5363db; }
+
+.form .input-btn {
+  width: 170px;
+  height: 50px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  background-color: #5b6ceb;
+  color: #fff;
+  margin-left: 65px;
+  margin-top: 31px; }
+
+.slogan {
+  display: inline-block;
+  margin-left: 90px;
+  color: #fff;
+  max-width: 485px;
+  vertical-align: middle; }
+  .slogan .h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 72px;
+    text-transform: uppercase; }
+  .slogan .slogan__em {
+    font-size: 2.5rem;
+    font-weight: 400;
+    max-width: 350px; }
+
+/*Program (выбор программы или курса)*/
+.program {
+  padding: 125px 0; }
+
+.program .h2 {
+  margin-bottom: 25px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #5b6ceb;
+  font-weight: 700;
+  font-size: 1.875rem; }
+
+.program > .program__p {
+  margin-bottom: 76px;
+  text-align: center;
+  color: #777777;
+  font-size: 2.56rem;
+  font-weight: 400; }
+
+/*Блоки с описанием программ*/
+.program-description-all {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+.program-description {
+  width: 570px;
+  height: 300px;
+  margin: 1%;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 8px; }
+  .program-description img {
+    float: left;
+    margin-right: 20px; }
+
+.program-description-div {
+  padding: 50px; }
+  .program-description-div .h3 {
+    color: #777777;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 45px;
+    color: #777777;
+    text-transform: uppercase; }
+  .program-description-div .program-description__text {
+    color: #555555;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 22px; }
+  .program-description-div .program-description__sign {
+    margin-top: 18px;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 22px;
+    color: #999999; }
+
+/*Gallery*/
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center; }
+
+.image-parent {
+  position: relative;
+  width: 480px;
+  height: 350px; }
+  .image-parent .image {
+    display: block;
+    position: relative;
+    width: inherit;
+    height: inherit;
+    transition: opacity 0.5s;
+    cursor: pointer; }
+    .image-parent .image:hover + div {
+      opacity: 1; }
+  .image-parent .image-hover {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(120, 133, 235, 0.7) url(../img/gallery_icon.png) center no-repeat;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s;
+    cursor: pointer; }
+    .image-parent .image-hover:hover {
+      opacity: 1; }
+
+/*ABOUT US*/
+.about {
+  text-align: center;
+  padding: 125px 0; }
+
+.about-div {
+  display: inline-block;
+  margin-right: 8%;
+  max-width: 450px;
+  vertical-align: middle;
+  text-align: left; }
+  .about-div .h4 {
+    margin-bottom: 30px;
+    color: #5b6ceb;
+    font-size: 1.875rem;
+    font-weight: 700;
+    line-height: 45px;
+    text-transform: uppercase; }
+  .about-div .about-p {
+    color: #555555;
+    font-size: 0.875;
+    font-weight: 400;
+    line-height: 22px; }
+
+.about .slider {
+  display: inline-block;
+  vertical-align: middle;
+  width: 500px;
+  height: 300px;
+  margin-right: 20px;
+  border-radius: 5px; }
+  .about .slider .single-item img {
+    width: 100%; }
+  .about .slider .slick-arrow:before {
+    color: #5b6ceb;
+    line-height: 22px; }
+  .about .slider .slick-next:before, .about .slider .slick-prev:before {
+    font-size: 34px;
+    background: #fff;
+    border-radius: 50%;
+    color: #5b6ceb;
+    padding: 5px; }
+  .about .slider .slick-next, .about .slider .slick-prev {
+    z-index: 100; }
+    .slick-next {
+    	right: 3px !important;
+    }
+    .slick-prev {
+    	left: -1px;
+    }
+
+/*Польза от йоги   .benefit*/
+.benefit-of-yoga {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 125px 11%;
+  justify-content: center;
+  background: url(../img/benefit-bg.png) center no-repeat;
+  background-size: cover; }
+
+.benefit {
+  max-width: 300px;
+  padding: 14px;
+  height: 230px;
+  color: #fff;
+  text-align: center; }
+
+.benefit__icon {
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  border: 2px solid white;
+  border-radius: 50%; }
+
+.benefit:nth-child(1) .benefit__icon {
+  background: url(../img/benefit-icon1.png) no-repeat center; }
+
+.benefit:nth-child(2) .benefit__icon {
+  background: url(../img/benefit-icon2.png) no-repeat center; }
+
+.benefit:nth-child(3) .benefit__icon {
+  background: url(../img/benefit-icon3.png) no-repeat center; }
+
+.benefit:nth-child(4) .benefit__icon {
+  background: url(../img/benefit-icon4.png) no-repeat center; }
+
+.benefit:nth-child(5) .benefit__icon {
+  background: url(../img/benefit-icon5.png) no-repeat center; }
+
+.benefit:nth-child(6) .benefit__icon {
+  background: url(../img/benefit-icon6.png) no-repeat center; }
+
+.benefit:nth-child(7) .benefit__icon {
+  background: url(../img/benefit-icon7.png) no-repeat center; }
+
+.benefit:nth-child(8) .benefit__icon {
+  background: url(../img/benefit-icon8.png) no-repeat center; }
+
+/*ЦЕНЫ price*/
+.price-reviews {
+  padding-top: 100px; }
+
+.price {
+  display: flex;
+  /*align-content: center;*/
+  justify-content: center; }
+  @media screen and (max-width: 720px) {
+    .price {
+      display: block;
+      width: 300px;
+      margin: 0 auto; }
+      .price .price-month__body {
+        padding-top: 0;
+        font-size: 16px; } }
+
+.price-month:nth-child(2) {
+  margin-left: 1.5%;
+  margin-right: 1.5%; }
+
+.price-month {
+  box-shadow: 0px 9px 50px 0px rgba(0, 0, 0, 0.1);
+  flex-basis: 370px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  color: #fff;
+  overflow: hidden; }
+
+.price-month__head {
+  background-color: #5b6ceb;
+  height: 150px;
+  font-weight: 700;
+  text-align: center; }
+  .price-month__head .price-month__head_dollar {
+    display: inline-block;
+    font-size: 32px;
+    line-height: 150px;
+    vertical-align: middle; }
+  .price-month__head .price-month__head_number {
+    display: inline-block;
+    font-size: 67px;
+    vertical-align: bottom;
+    margin-right: 5px;
+    margin-left: 20px;
+    line-height: 150px; }
+  .price-month__head .price-month__head_mounth {
+    display: inline-block;
+    font-size: 18px;
+    vertical-align: bottom;
+    line-height: 115px; }
+
+.price-month__body {
+  padding: 30px 0;
+  text-align: center;
+  color: #555555;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px; }
+  .price-month__body .price-month__body_hr {
+    display: inline-block;
+    background: grey;
+    height: 1px;
+    width: 30%; }
+  .price-month__body .price-month__body_p {
+    margin-top: 20px;
+    margin-bottom: 20px; }
+  .price-month__body .price-month__btn {
+    margin-top: 50px;
+    padding: 18px 50px;
+    border-radius: 20px;
+    background: #5b6ceb;
+    border: none;
+    color: white;
+    outline: none;
+    cursor: pointer;
+    font-size: 18px; }
+    .price-month__body .price-month__btn:hover {
+      background: #182dc8; }
+
+/*	ОТЗЫВЫ .reviews-about
+*/
+.reviews-radio {
+  display: inline-block; }
+
+.reviews-radio input:nth-child(1):checked + div {
+  visibility: visible; }
+
+.reviews-about {
+  margin: 0 auto;
+  margin-top: 100px;
+  max-width: 1160px;
+  position: relative; }
+  .reviews-about .reviews-radio {
+    position: absolute;
+    right: -40px;
+    top: 50%;
+    transform: translateY(-50%); }
+    .reviews-about .reviews-radio input {
+      display: block;
+      margin-top: 20px;
+      height: 20px;
+      width: 20px; }
+
+.reviews-about div:nth-child(2) {
+  position: relative; }
+
+.reviews {
+  visibility: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  box-shadow: 0px 9px 50px 0px rgba(0, 0, 0, 0.1);
+  padding-top: 40px; }
+
+.reviews__foto {
+  float: left;
+  margin-left: 60px;
+  margin-right: 35px; }
+
+.reviews__content {
+  font-size: 14px;
+  padding-left: 250px; }
+  .reviews__content .reviews__content_p {
+    padding-top: 10px; }
+
+.reviews__content_p {
+  padding: 40px; }
+
+.reviews__content_sign {
+  height: 60px;
+  position: relative;
+  border-left: 2px solid silver; }
+  .reviews__content_sign p {
+    position: absolute;
+    bottom: 0px;
+    left: 40px; }
+
+.reviews__content_name {
+  color: #5b6ceb;
+  font-style: 16px;
+  font-weight: 600;
+  text-transform: capitalize; }
+
+/*Модальные окна*/
+.modal {
+  position: fixed !important;
+  /*width: 66% !important;*/
+  height: auto !important;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100 !important; }
+
+.modal-mobile {
+  position: fixed !important;
+  /*width: 99% !important;*/
+  height: auto !important;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100 !important; }
+
+.modal-parent {
+  position: fixed !important;
+  width: 100% !important;
+  height: 100% !important;
+  left: 0;
+  top: 0;
+  z-index: 90 !important; }
+
+.footer {
+  box-shadow: 0px 9px 50px 0px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+}
+
+@media screen and (max-width: 675px) {
+	.header {
+		display: block;
+	}
+	.header .logo {
+		float: left;
+	}
+	.header .nav {
+		float: right !important;
+		margin-top: 10px;
+	}
+	.form {
+		margin: 0px !important;
+		width: 96% !important;
+	}
+}

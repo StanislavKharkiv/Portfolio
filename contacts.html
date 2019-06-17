@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Portfolio</title>
+	<link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">	
+	<link rel="stylesheet" href="css/contacts.css">
+	<script src="http://code.jquery.com/jquery-3.3.1.min.js"
+		  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+		  crossorigin="anonymous"></script>
+</head>
+<body>
+	<div class="wrapper">
+				
+		<header>
+			<div class="logo">
+			<img src="img/1_Primary_logo_on_transparent_212x63.png" alt="логотип сайта" title="logo">
+		    </div>
+
+			<nav class="nav">
+				<ul>
+					<li><a class="a" href="about.html">обо мне</a></li>
+					<li><a class="a" href="index.html">галерея</a></li>
+					<li><a class="a active-a" href="contacts.html">контакты</a></li>
+				</ul>
+			</nav>
+		</header>
+			
+		<div class="main">
+			<div class="main-contacts">
+				<h1 class="con-h1">Мои контакты</h1>
+				<p>Вы можете связаться со мной следующими способами:</p>
+				<address>
+					<ul>
+						<li>Телефон (viber, telegram): <a>+380930225275</a></li>
+						<li>Почта: <a mailto="shtas89@gmail.com">shtas89@gmail.com</a></li>
+					</ul>
+				</address>
+				<p>Так же вы можете написать мне</p>
+				<form action="https://formspree.io/shtas89@gmail.com" method="POST" class="form" target="_blank">
+					<span class="form__span">Ваше имя:</span><input class="input-text" type="text" name="name" maxlength="35" required><br>
+					<span class="form__span">Ваша почта:</span><input class="input-text" type="email" name="email" maxlength="35" required><br>
+					<span class="form__span">Собщение:</span><textarea class="input-text" type="text" name="text" required></textarea><br>
+					<input class="input-submit" type="submit" value="отправить">
+				</form>
+			</div>
+		</div>
+</body>
+</html>
